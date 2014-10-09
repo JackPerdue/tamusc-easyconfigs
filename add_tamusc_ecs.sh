@@ -12,7 +12,7 @@ EBGITDIR=$EBDIR/tamusc/githubs/jack
 EBECDIR=$EBGITDIR/easybuild-easyconfigs/easybuild/easyconfigs
 TAMUECDIR=$EBGITDIR/tamusc-easyconfigs
 
-for x in 4 5 6 8 ; do
+for x in 8 6 5 4 ; do
   case $x in 
     4) dir=$EBSWDIR ;;
     5) dir=$EBSWDIR/Core ;;
@@ -28,9 +28,9 @@ for x in 4 5 6 8 ; do
     if [ -f $EBECDIR/$bflow/$bdir/$bname ] ; then
       diff $y $EBECDIR/$bflow/$bdir/$bname >& /dev/null
       if [ $? -eq 0 ] ; then
-        echo "# $bname came from $EBECDIR/$bflow/$bdir/$bname" > /dev/null
+        echo "#EE $bname came from $EBECDIR/$bflow/$bdir/$bname" > /dev/null
       else
-        echo "EEEEE WARNING: diff $y $EBECDIR/$bflow/$bdir/$bname"
+        echo "####EEEEE WARNING: diff $y $EBECDIR/$bflow/$bdir/$bname"
       fi
     else
       if [ ! -d $TAMUECDIR/$bflow/$bdir ] ; then
@@ -41,9 +41,9 @@ for x in 4 5 6 8 ; do
       else 
         diff $y $TAMUECDIR/$bflow/$bdir/$bname >& /dev/null
         if [ $? -ne 0 ] ; then
-          echo "TTTTT WARNING: diff $y $TAMUECDIR/$bflow/$bdir/$bname"
+          echo "####TTTTT WARNING: diff $y $TAMUECDIR/$bflow/$bdir/$bname"
         else
-          echo "# Already have a copy of $y" > /dev/null
+          echo "#TT Already have a copy of $y" > /dev/null
         fi
       fi
     fi
