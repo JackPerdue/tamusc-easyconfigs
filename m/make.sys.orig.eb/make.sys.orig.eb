@@ -63,7 +63,7 @@ F77            = mpif77
 # preprocessing flags must include DFLAGS and IFLAGS
 
 CPP            = cpp
-CPPFLAGS       = -I/g/software/easybuild/software/ATLAS/3.8.4-gompi-1.1.0-no-OFED-LAPACK-3.4.0/include -I/g/software/easybuild/software/BLACS/1.1-gompi-1.1.0-no-OFED/include -I/g/software/easybuild/software/ScaLAPACK/1.8.0-gompi-1.1.0-no-OFED-ATLAS-3.8.4-LAPACK-3.4.0-BLACS-1.1/include -I/g/software/easybuild/software/FFTW/3.3.1-gompi-1.1.0-no-OFED/include $(DFLAGS) $(IFLAGS)
+CPPFLAGS       = -I/g/software/easybuild/software/ATLAS/3.10.1-gompi-1.5.12-no-OFED-LAPACK-3.4.2/include -I/g/software/easybuild/software/ScaLAPACK/2.0.2-gompi-1.5.12-no-OFED-ATLAS-3.10.1-LAPACK-3.4.2/include -I/g/software/easybuild/software/FFTW/3.3.3-gompi-1.5.12-no-OFED/include $(DFLAGS) $(IFLAGS)
 
 # compiler flags: C, F90, F77
 # C flags must include DFLAGS and IFLAGS
@@ -82,7 +82,7 @@ FFLAGS_NOOPT   = -O0 -g
 # Typically LD coincides with F90 or MPIF90, LD_LIBS is empty
 
 LD             = mpif90
-LDFLAGS        = -L/g/software/easybuild/software/GCC/4.6.3/lib64 -L/g/software/easybuild/software/GCC/4.6.3/lib -L/g/software/easybuild/software/ATLAS/3.8.4-gompi-1.1.0-no-OFED-LAPACK-3.4.0/lib -L/g/software/easybuild/software/BLACS/1.1-gompi-1.1.0-no-OFED/lib -L/g/software/easybuild/software/ScaLAPACK/1.8.0-gompi-1.1.0-no-OFED-ATLAS-3.8.4-LAPACK-3.4.0-BLACS-1.1/lib -L/g/software/easybuild/software/FFTW/3.3.1-gompi-1.1.0-no-OFED/lib
+LDFLAGS        = -L/g/software/easybuild/software/GCC/4.8.1/lib64 -L/g/software/easybuild/software/GCC/4.8.1/lib -L/g/software/easybuild/software/ATLAS/3.10.1-gompi-1.5.12-no-OFED-LAPACK-3.4.2/lib -L/g/software/easybuild/software/ScaLAPACK/2.0.2-gompi-1.5.12-no-OFED-ATLAS-3.10.1-LAPACK-3.4.2/lib -L/g/software/easybuild/software/FFTW/3.3.3-gompi-1.5.12-no-OFED/lib
 LD_LIBS        = 
 
 # External Libraries (if any) : blas, lapack, fft, MPI
@@ -91,7 +91,7 @@ LD_LIBS        =
 # BLAS_LIBS = /your/path/to/espresso/BLAS/blas.a
 # BLAS_LIBS_SWITCH = internal
 
-BLAS_LIBS      = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.1.0-no-OFED/espresso-4.2/BLAS/blas.a
+BLAS_LIBS      = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.5.12-no-OFED/espresso-4.2/BLAS/blas.a
 BLAS_LIBS_SWITCH = internal
 
 # If you have nothing better, use the local copy :
@@ -104,7 +104,7 @@ BLAS_LIBS_SWITCH = internal
 # For IBM machines with essl (-D__ESSL): load essl BEFORE lapack !
 # remember that LAPACK_LIBS precedes BLAS_LIBS in loading order
 
-LAPACK_LIBS    = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.1.0-no-OFED/espresso-4.2/lapack-3.2/lapack.a
+LAPACK_LIBS    = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.5.12-no-OFED/espresso-4.2/lapack-3.2/lapack.a
 LAPACK_LIBS_SWITCH = internal
 
 SCALAPACK_LIBS = 
@@ -145,4 +145,4 @@ LIBOBJS        = ../flib/ptools.a ../flib/flib.a ../clib/clib.a ../iotk/src/libi
 LIBS           = $(SCALAPACK_LIBS) $(LAPACK_LIBS) $(FFT_LIBS) $(BLAS_LIBS) $(MPI_LIBS) $(MASS_LIBS) $(PGPLOT_LIBS) $(LD_LIBS)
 
 # topdir for linking espresso libs with plugins
-TOPDIR = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.1.0-no-OFED/espresso-4.2
+TOPDIR = /g/software/easybuild/software/QuantumESPRESSO/4.2-goalf-1.5.12-no-OFED/espresso-4.2
