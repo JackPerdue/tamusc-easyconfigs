@@ -27,7 +27,7 @@ comp_mpi_tc = (comp_mpi_tc_name, comp_mpi_tc_ver)
 # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
 # because of toolchain preperation functions
 dependencies = [
-    ('GCC', '4.8.3'),
+    ('GCC', comp_version),
     ('OpenMPI', '1.8.1', '', comp),  
     (blaslib, blasver, blassuff, comp),
     ('FFTW', '3.3.4', '', comp_mpi_tc),
