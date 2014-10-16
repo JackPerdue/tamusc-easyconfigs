@@ -11,12 +11,12 @@ for x in `diff -q -r . $EBECDIR | grep Only | grep -v '\.git' | grep '.eb' | cut
     diff -q $x $TAMUECDIR/$x
     if [ $? -eq 0 ] ; then
       echo "$x is the same as $TAMUECDIR/$x"
-      git rm $x
+      git rm -v $x
     else
-      "### DIFF: diff $x $TAMUECDIR/$x"
+      echo "### DIFF: diff $x $TAMUECDIR/$x"
     fi
   else
-    cp $x $TAMUECDIR/$x
+    cp -v $x $TAMUECDIR/$x
     #git rm $x
   fi
 done

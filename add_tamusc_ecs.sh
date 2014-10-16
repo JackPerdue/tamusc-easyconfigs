@@ -21,6 +21,11 @@ for x in 8 6 5 4 ; do
     *) exit 1 ;;
   esac 
   for y in `find $dir -maxdepth $x -name \*.eb | sort` ; do
+    echo $y | grep -e Makefile -e tamu >& /dev/null
+    if [ $? -eq 0 ] ; then
+      echo "#### Skipping $y"
+      continue
+    fi
     bname=`basename $y`
     bdir=`echo $bname | cut -f 1 -d '-'`
     bflow=`echo $bname | cut -b 1 | tr '[:upper:]' '[:lower:]'`
