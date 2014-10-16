@@ -35,7 +35,7 @@ for x in 8 6 5 4 ; do
       if [ $? -eq 0 ] ; then
         echo "#EE $bname came from $EBECDIR/$bflow/$bdir/$bname" > /dev/null
       else
-        echo "####EEEEE WARNING: diff $y $EBECDIR/$bflow/$bdir/$bname"
+        echo "####EEEEE WARNING: diff $EBECDIR/$bflow/$bdir/$bname $y"
       fi
     else
       if [ ! -d $TAMUECDIR/$bflow/$bdir ] ; then
@@ -46,7 +46,7 @@ for x in 8 6 5 4 ; do
       else 
         diff $y $TAMUECDIR/$bflow/$bdir/$bname >& /dev/null
         if [ $? -ne 0 ] ; then
-          echo "####TTTTT WARNING: diff $y $TAMUECDIR/$bflow/$bdir/$bname"
+          echo "####TTTTT WARNING: diff $TAMUECDIR/$bflow/$bdir/$bname $y"
         else
           echo "#TT Already have a copy of $y" > /dev/null
         fi
