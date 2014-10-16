@@ -17,7 +17,7 @@ description = """bbftpPRO is a data transfer program - as opposed to ordinary fi
  at the Particle Physics Dept. of Weizmann Institute of Science as an enhancement of bbftp,
  developed at IN2P3, ref: http://doc.in2p3.fr/bbftp/"""
 
-toolchain = {'name': 'ictce', 'version': '6.2.5'}
+toolchain = {'name': 'ictce', 'version': '5.5.0'}
 
 # fi. http://bbftppro.myftp.org/bbftpPRO-9.3.1.tar.bz2
 sources = [SOURCE_TAR_BZ2]

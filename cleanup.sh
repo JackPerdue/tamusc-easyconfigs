@@ -6,7 +6,7 @@ EBECDIR=~/github/easybuild-easyconfigs.develop/easybuild/easyconfigs/ # clean co
 TAMUECDIR=/software/easybuild/tamusc/githubs/jack/tamusc-easyconfigs # move stuff to here
 
 cd $JKPECDIR
-for x in `diff -q -r . $EBECDIR | grep Only | grep -v '\.git' | cut -f 3,4 -d ' ' | sed 's,^\./,,' | sed 's,: ,/,'` ; do
+for x in `diff -q -r . $EBECDIR | grep Only | grep -v '\.git' | grep '.eb' | cut -f 3,4 -d ' ' | sed 's,^\./,,' | sed 's,: ,/,'` ; do
   if [ -f $TAMUECDIR/$x ] ; then
     diff -q $x $TAMUECDIR/$x
     if [ $? -eq 0 ] ; then

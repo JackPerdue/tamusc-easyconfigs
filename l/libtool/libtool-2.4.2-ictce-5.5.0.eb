@@ -7,7 +7,7 @@ description = """GNU libtool is a generic library support script. Libtool hides 
  behind a consistent, portable interface."""
 
 
-toolchain = {'name': 'ictce', 'version': '6.2.5'}
+toolchain = {'name': 'ictce', 'version': '5.5.0'}
 
 sources = [SOURCELOWER_TAR_GZ]
 source_urls = [GNU_SOURCE]

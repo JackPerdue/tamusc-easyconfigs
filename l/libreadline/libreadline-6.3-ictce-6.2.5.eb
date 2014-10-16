@@ -1,5 +1,5 @@
 name = 'libreadline'
-version = '6.2'
+version = '6.3'
 
 
 homepage = 'http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html'
@@ -14,7 +14,7 @@ toolchainopts = {'pic': True}
 sources = ['readline-%(version)s.tar.gz']
 source_urls = ['http://ftp.gnu.org/gnu/readline']
 
-dependencies = [('ncurses', '5.9')]
+dependencies = [('ncurses', '5.9', versionsuffix)]
 
 sanity_check_paths = {
     'files' : ['lib/libreadline.a', 'lib/libhistory.a'] +

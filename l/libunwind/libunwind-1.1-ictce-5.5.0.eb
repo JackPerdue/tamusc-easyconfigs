@@ -9,7 +9,7 @@ description = """The primary goal of libunwind is to define a portable and effic
  (non-local goto). The API supports both local (same-process) and remote (across-process) operation.
  As such, the API is useful in a number of applications"""
 
-toolchain = {'name': 'ictce', 'version': '6.2.5'}
+toolchain = {'name': 'ictce', 'version': '5.5.0'}
 
 sources = [SOURCE_TAR_GZ]
 source_urls = [GNU_SAVANNAH_SOURCE]
